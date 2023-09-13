@@ -147,6 +147,7 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 import pickle
 
+
 spark = SparkSession.builder.appName("collaborative").getOrCreate()
 data = spark.read.csv("ReviewRaw.csv", header=True, inferSchema=True)
 data_pandas = data.toPandas()
@@ -274,5 +275,5 @@ elif choice == 'Collaborative Filtering':
         product_id_idx, product_id, rating = rec
         st.write(f"Product index: {product_id_idx}, Product: {product_id}, Rating: {rating}")
 
-
+spark.stop()
 
