@@ -4,8 +4,6 @@ pandas
 matplotlib
 seaborn
 scikit-learn
-plotly
-pickle
 underthesea
 gensim
 wordcloud
